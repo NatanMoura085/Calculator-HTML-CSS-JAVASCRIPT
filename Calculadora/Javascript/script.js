@@ -1,31 +1,14 @@
-let VisaoGeral = document.getElementById("VisaoGeral");
 
-function display(num) {
+let display = document.getElementById('screen');
 
-    VisaoGeral.value += num
-
+const Del = () => {
+    display.value = '';
 }
 
-function Calcular() {
-
-    try{
-        VisaoGeral.value = eval(VisaoGeral.value);
-
-    }catch(err) {
-
-        alert("invalid")
-    }
-
-}
-function Clear() {
-
-    VisaoGeral.value = "";
-
+const Display = (n) => {
+    display.value += n;
 }
 
-function Del(){
-
-    VisaoGeral.value = VisaoGeral.value.slice(0,-1)
-
-
+const Calcular = () => {
+    display.value = eval(display.value);
 }
